@@ -117,7 +117,7 @@ else :
             print(f"el numero {numero} no es divisible por 2, 3, 5 o 7")
     #para checkear todos los casos sugiero agregar 5 numeros a la lista: 4, 9, 25, 49, 11
 
-    time.sleep(3)
+    time.sleep(4)
     if os.name == 'nt':
         os.system('cls')  # Comando para Windows
     else :
@@ -196,7 +196,39 @@ print(f"los divisores de {numero} son {divisores_str}")
     por ninguno otro número que no sea él mismo o la unidad)
 '''
 
-if len(divisores) == 2 : #que pasa? si es == 2 significa que solo es divisible por 1 y por si mismo entonces es primo
+if len(divisores) == 2 : #que pasa? si la longitud de la lista == 2 significa que solo es divisible por 1 y por si mismo entonces es primo
     print(f"{numero} es un numero primo")
 else :
     print(f"{numero} no es un numero primo")
+
+'''
+    #12) Pide una nota (número). Muestra la calificación según la nota:
+        0-3: Muy deficiente
+        3-5: Insuficiente
+        5-6: Suficiente
+        6-7: Bien
+        7-9: Notable
+        9-10: Sobresaliente
+    voy a hacer este ejercicio del a forma basica ya que hasta el momento solo vimos condicionales y estrucuras repetitivas
+    (ni siquiera vimos funciones)
+    pero sepan que puede hacerse de varias maneras (con tuplas por ejemplo)
+'''  
+#Pedimos el numero
+nota = int(input("ingrese su calificacion: "))
+
+if 0 <= nota < 3 :
+    calificacion = "Muy deficiente"
+elif 3 <= nota < 5 :
+    calificacion = "Insuficiente"
+elif 5 <= nota < 6 :
+    calificacion = "Suficiente"
+elif 6 <= nota < 7 :
+    calificacion = "Bien"
+elif 7 <= nota < 9 :
+    calificacion = "Notable"
+elif 9 <= nota <= 10 :
+    calificacion = "Sobresaliente"
+else : print("la nota debe ser entre cero y diez")
+
+print(f"nota: {nota}, calificacion: {calificacion}")
+
